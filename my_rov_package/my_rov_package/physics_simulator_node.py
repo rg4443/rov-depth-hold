@@ -31,3 +31,13 @@ class PhysicsSimulatorNode(Node):
         msg = Float64()
         msg.data = self.depth
         self.depth_pub.publish(msg)
+
+def main(args):
+    rclpy.init(args=args)
+    node = PhysicsSimulatorNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == "__main__":
+    main()

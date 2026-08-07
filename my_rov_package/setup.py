@@ -29,6 +29,7 @@ setup(
         'console_scripts': [
             'controller_node = my_rov_package.controller_node:main',
             'depth_sensor = my_rov_package.depth_sensor:main',
+            'physics_simulator_node = my_rov_package.physics_simulator_node:main'
         ],
     },
 )
