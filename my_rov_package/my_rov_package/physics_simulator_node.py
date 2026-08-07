@@ -19,7 +19,7 @@ class PhysicsSimulatorNode(Node):
 
         self.timer = self.create_timer(0.1, self.physics_update)
 
-        self.get_logger.info("PhysicsSimulatorNode Initialized")
+        self.get_logger().info("PhysicsSimulatorNode Initialized")
 
     def thrust_callback(self, msg):
         self.applied_thrust = msg.data
