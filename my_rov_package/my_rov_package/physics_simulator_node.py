@@ -14,10 +14,12 @@ class PhysicsSimulatorNode(Node):
         self.velocity = 0.0        # m/s
         self.applied_thrust = 0.0  # N
 
-        self.thrust_sub = self.create_subscription(Float64, "thruster_command", self.thurst_callback, 10)
+        self.thrust_sub = self.create_subscription(Float64, "thruster_command", self.thrust_callback, 10)
         self.depth_pub = self.create_publisher(Float64, "depth_reading", 10)
 
-        self.timer = self.create_timer(0.1, self.phsyics_update)
+        self.timer = self.create_timer(0.1, self.physics_update)
+
+        self.get_logger.info("PhysicsSimulatorNode Initialized")
 
     def thrust_callback(self, msg):
         self.applied_thrust = msg.data
@@ -32,7 +34,7 @@ class PhysicsSimulatorNode(Node):
         msg.data = self.depth
         self.depth_pub.publish(msg)
 
-def main(args):
+def main(args=None):
     rclpy.init(args=args)
     node = PhysicsSimulatorNode()
     rclpy.spin(node)
