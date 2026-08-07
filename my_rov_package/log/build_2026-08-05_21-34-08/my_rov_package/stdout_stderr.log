@@ -1,0 +1,31 @@
+running egg_info
+creating build/my_rov_package/my_rov_package.egg-info
+writing build/my_rov_package/my_rov_package.egg-info/PKG-INFO
+writing dependency_links to build/my_rov_package/my_rov_package.egg-info/dependency_links.txt
+writing entry points to build/my_rov_package/my_rov_package.egg-info/entry_points.txt
+writing requirements to build/my_rov_package/my_rov_package.egg-info/requires.txt
+writing top-level names to build/my_rov_package/my_rov_package.egg-info/top_level.txt
+writing manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+reading manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+writing manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build/lib
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build/lib/my_rov_package
+copying my_rov_package/__init__.py -> /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build/lib/my_rov_package
+running install
+running install_lib
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package
+copying /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build/lib/my_rov_package/__init__.py -> /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package
+byte-compiling /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/share/ament_index
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/share/ament_index/resource_index
+creating /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/share/ament_index/resource_index/packages
+copying resource/my_rov_package -> /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/share/ament_index/resource_index/packages
+copying package.xml -> /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/share/my_rov_package
+running install_egg_info
+Copying build/my_rov_package/my_rov_package.egg-info to /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/install.log'

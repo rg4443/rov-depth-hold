@@ -1,0 +1,3 @@
+[console_scripts]
+controller = my_rov_package.controller_node:main
+

@@ -1,0 +1,12 @@
+running egg_info
+writing build/my_rov_package/my_rov_package.egg-info/PKG-INFO
+writing dependency_links to build/my_rov_package/my_rov_package.egg-info/dependency_links.txt
+writing entry points to build/my_rov_package/my_rov_package.egg-info/entry_points.txt
+writing requirements to build/my_rov_package/my_rov_package.egg-info/requires.txt
+writing top-level names to build/my_rov_package/my_rov_package.egg-info/top_level.txt
+reading manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+writing manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+running build
+running install
+running install_data
+error: can't copy 'resource/my_rov_package': doesn't exist or not a regular file

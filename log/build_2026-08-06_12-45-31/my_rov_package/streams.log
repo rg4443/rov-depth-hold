@@ -1,0 +1,33 @@
+[1.083s] Invoking command in '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package': PYTHONPATH=/mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_rov_package build --build-base /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build install --record /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/install.log --install-scripts $base/lib/my_rov_package --single-version-externally-managed install_data
+[1.559s] running egg_info
+[1.562s] creating ../build/my_rov_package/my_rov_package.egg-info
+[1.565s] writing ../build/my_rov_package/my_rov_package.egg-info/PKG-INFO
+[1.573s] writing dependency_links to ../build/my_rov_package/my_rov_package.egg-info/dependency_links.txt
+[1.577s] writing entry points to ../build/my_rov_package/my_rov_package.egg-info/entry_points.txt
+[1.581s] writing requirements to ../build/my_rov_package/my_rov_package.egg-info/requires.txt
+[1.583s] writing top-level names to ../build/my_rov_package/my_rov_package.egg-info/top_level.txt
+[1.587s] writing manifest file '../build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+[1.608s] reading manifest file '../build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+[1.649s] writing manifest file '../build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'
+[1.651s] running build
+[1.651s] running build_py
+[1.656s] creating /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build
+[1.657s] creating /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build/lib
+[1.658s] creating /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build/lib/my_rov_package
+[1.664s] copying my_rov_package/__init__.py -> /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build/lib/my_rov_package
+[1.674s] running install
+[1.674s] running install_lib
+[1.688s] creating /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages/my_rov_package
+[1.700s] copying /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build/lib/my_rov_package/__init__.py -> /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages/my_rov_package
+[1.725s] byte-compiling /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages/my_rov_package/__init__.py to __init__.cpython-310.pyc
+[1.746s] running install_data
+[1.750s] creating /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/share/ament_index
+[1.752s] creating /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/share/ament_index/resource_index
+[1.754s] creating /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/share/ament_index/resource_index/packages
+[1.761s] copying resource/my_rov_package -> /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/share/ament_index/resource_index/packages
+[1.777s] copying package.xml -> /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/share/my_rov_package
+[1.786s] running install_egg_info
+[1.797s] Copying ../build/my_rov_package/my_rov_package.egg-info to /mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages/my_rov_package-0.0.0-py3.10.egg-info
+[1.970s] running install_scripts
+[2.025s] writing list of installed files to '/mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/install.log'
+[2.043s] Invoked command in '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package' returned '0': PYTHONPATH=/mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/garci/code/rov-depth-hold/install/my_rov_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_rov_package build --build-base /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/build install --record /mnt/c/Users/garci/code/rov-depth-hold/build/my_rov_package/install.log --install-scripts $base/lib/my_rov_package --single-version-externally-managed install_data

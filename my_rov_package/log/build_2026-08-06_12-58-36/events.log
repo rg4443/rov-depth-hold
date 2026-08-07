@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000250] (my_rov_package) JobQueued: {'identifier': 'my_rov_package', 'dependencies': OrderedDict()}
+[0.000428] (my_rov_package) JobStarted: {'identifier': 'my_rov_package'}
+[0.098893] (-) TimerEvent: {}
+[0.199199] (-) TimerEvent: {}
+[0.299499] (-) TimerEvent: {}
+[0.399754] (-) TimerEvent: {}
+[0.500031] (-) TimerEvent: {}
+[0.600303] (-) TimerEvent: {}
+[0.700666] (-) TimerEvent: {}
+[0.800972] (-) TimerEvent: {}
+[0.901416] (-) TimerEvent: {}
+[1.001748] (-) TimerEvent: {}
+[1.014550] (my_rov_package) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', 'build/my_rov_package', 'build', '--build-base', '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/build', 'install', '--record', '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/install.log', '--install-scripts', '$base/lib/my_rov_package', '--single-version-externally-managed', 'install_data'], 'cwd': '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package', 'env': {'USER': 'rafa', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/rafa', 'OLDPWD': '/mnt/c/Users/garci/code/rov-depth-hold', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'rafa', 'NAME': 'DESKTOP-1VCLDPA', 'WSL_INTEROP': '/run/WSL/6464_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/garci/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/garci/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0:/mnt/c/WINDOWS/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Heroku/bin:/mnt/c/Users/garci/AppData/Local/nvm:/mnt/c/nvm4w/nodejs:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/garci/.cargo/bin:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python37/Scripts:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python37:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python38/Scripts:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python38:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python312/Scripts:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python312:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python311/Scripts:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python311:/mnt/c/Users/garci/.pyenv/pyenv-win/bin:/mnt/c/Users/garci/.pyenv/pyenv-win/shims:/mnt/c/Users/garci/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/garci/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/garci/AppData/Local/GitHubDesktop/bin:/mnt/c/MinGW/bin:/mnt/c/Users/garci/AppData/Local/Programs/mongosh:/mnt/c/Users/garci/AppData/Roaming/npm:/mnt/c/Users/garci/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/garci/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/ffmpeg/bin:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python38:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python37:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python312:/mnt/c/Users/garci/AppData/Local/Programs/Python/Python311:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/mnt/c/Users/garci/AppData/Roaming/Claude/local-agent-mode-sessions/09457518-1aa6-4f15-b767-2f9fb88bf1c4/661bb764-ef68-4808-9b0d-5bc0a606486c/rpm/plugin_014WxCYbLf7f3uw2isHFR9US/bin:/mnt/c/Users/garci/AppData/Roaming/Claude/local-agent-mode-sessions/09457518-1aa6-4f15-b767-2f9fb88bf1c4/661bb764-ef68-4808-9b0d-5bc0a606486c/rpm/plugin_0155zZVATbJU3jHUmPP9NvMC/bin:/mnt/c/Users/garci/AppData/Roaming/Claude/local-agent-mode-sessions/09457518-1aa6-4f15-b767-2f9fb88bf1c4/661bb764-ef68-4808-9b0d-5bc0a606486c/rpm/plugin_01FTLa86dhbVJ3HB1LdHdhN7/bin:/mnt/c/Users/garci/AppData/Roaming/Claude/local-agent-mode-sessions/09457518-1aa6-4f15-b767-2f9fb88bf1c4/661bb764-ef68-4808-9b0d-5bc0a606486c/rpm/plugin_01XYoBMEPd2C7JxE1tsqPqpU/bin:/mnt/c/Users/garci/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/661bb764-ef68-4808-9b0d-5bc0a606486c/09457518-1aa6-4f15-b767-2f9fb88bf1c4/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'PWD': '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package', 'PYTHONPATH': '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.101857] (-) TimerEvent: {}
+[1.202131] (-) TimerEvent: {}
+[1.302400] (-) TimerEvent: {}
+[1.402669] (-) TimerEvent: {}
+[1.503028] (-) TimerEvent: {}
+[1.553583] (my_rov_package) StdoutLine: {'line': b'running egg_info\n'}
+[1.558321] (my_rov_package) StdoutLine: {'line': b'writing build/my_rov_package/my_rov_package.egg-info/PKG-INFO\n'}
+[1.562812] (my_rov_package) StdoutLine: {'line': b'writing dependency_links to build/my_rov_package/my_rov_package.egg-info/dependency_links.txt\n'}
+[1.567305] (my_rov_package) StdoutLine: {'line': b'writing entry points to build/my_rov_package/my_rov_package.egg-info/entry_points.txt\n'}
+[1.570703] (my_rov_package) StdoutLine: {'line': b'writing requirements to build/my_rov_package/my_rov_package.egg-info/requires.txt\n'}
+[1.572960] (my_rov_package) StdoutLine: {'line': b'writing top-level names to build/my_rov_package/my_rov_package.egg-info/top_level.txt\n'}
+[1.597562] (my_rov_package) StdoutLine: {'line': b"reading manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'\n"}
+[1.603122] (-) TimerEvent: {}
+[1.644636] (my_rov_package) StdoutLine: {'line': b"writing manifest file 'build/my_rov_package/my_rov_package.egg-info/SOURCES.txt'\n"}
+[1.646672] (my_rov_package) StdoutLine: {'line': b'running build\n'}
+[1.647432] (my_rov_package) StdoutLine: {'line': b'running build_py\n'}
+[1.658969] (my_rov_package) StdoutLine: {'line': b'running install\n'}
+[1.659518] (my_rov_package) StdoutLine: {'line': b'running install_lib\n'}
+[1.703216] (-) TimerEvent: {}
+[1.704070] (my_rov_package) StdoutLine: {'line': b'running install_data\n'}
+[1.735475] (my_rov_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.743700] (my_rov_package) StdoutLine: {'line': b"removing '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.785061] (my_rov_package) StdoutLine: {'line': b'Copying build/my_rov_package/my_rov_package.egg-info to /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/python3.10/site-packages/my_rov_package-0.0.0-py3.10.egg-info\n'}
+[1.803315] (-) TimerEvent: {}
+[1.903596] (-) TimerEvent: {}
+[2.003933] (-) TimerEvent: {}
+[2.019155] (my_rov_package) StdoutLine: {'line': b'running install_scripts\n'}
+[2.069657] (my_rov_package) StdoutLine: {'line': b'Installing controller script to /mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/install/my_rov_package/lib/my_rov_package\n'}
+[2.079092] (my_rov_package) StdoutLine: {'line': b"writing list of installed files to '/mnt/c/Users/garci/code/rov-depth-hold/my_rov_package/build/my_rov_package/install.log'\n"}
+[2.098113] (my_rov_package) CommandEnded: {'returncode': 0}
+[2.103998] (-) TimerEvent: {}
+[2.204258] (-) TimerEvent: {}
+[2.296656] (my_rov_package) JobEnded: {'identifier': 'my_rov_package', 'rc': 0}
+[2.302268] (-) EventReactorShutdown: {}
