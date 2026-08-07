@@ -13,11 +13,11 @@ class ControllerNode(Node):
         self.declare_parameter("kd", 0.1)
 
         self._kp: float = self.get_parameter("kp").value
-        self._kd: float = self.get_parameter("ki").value
-        self._ki: float = self.get_parameter("kd").value
+        self._ki: float = self.get_parameter("ki").value
+        self._kd: float = self.get_parameter("kd").value
 
-        self._output_min: float = -1.0
-        self._output_max: float = 1.0
+        self._output_min: float = -3.0
+        self._output_max: float = 3.0
 
         self.integral: float = 0.0
         self.previous_error = None
