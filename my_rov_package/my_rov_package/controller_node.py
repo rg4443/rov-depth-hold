@@ -1,23 +1,28 @@
 import rclpy
 from rclpy.node import Node 
 from std_msgs.msg import Float64
+import pytest
+
+@pytest.fixture
+def p_only_pid():
+    return ControllerNode(kp=2.0, ki=0.0, kd=0.0, output_min=-10.0, output_max=10.0)
 
 class ControllerNode(Node):
-    def __init__(self):
+    def __init__(self, kp: float = 2.0, ki: float = 2.0, kd: float = 2.09, output_min: float = -10.0, output_max = 10.0):
         super().__init__("controller_node")
 
         self.target_depth: float = 3.0
 
-        self.declare_parameter("kp", 2.0)
-        self.declare_parameter("ki", 0.1)
-        self.declare_parameter("kd", 0.1)
+        self.declare_parameter("kp", kp)
+        self.declare_parameter("ki", ki)
+        self.declare_parameter("kd", kd)
 
         self._kp: float = self.get_parameter("kp").value
         self._ki: float = self.get_parameter("ki").value
         self._kd: float = self.get_parameter("kd").value
 
-        self._output_min: float = -10.0
-        self._output_max: float = 10.0
+        self._output_min: float = output_min
+        self._output_max: float = output_max
 
         self.integral: float = 0.0
         self.previous_error = None
