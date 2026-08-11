@@ -106,7 +106,7 @@ def test_proportional_output(only_pid):
     assert captured_msgs[0].data == 6.0
 
 def test_integral_output(only_pid):
-    only_pid.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, True)])
+    only_pid.set_parameters([Parameter("use_sim_time", Parameter.Type.BOOL, True)])
     only_pid.get_clock().is_ros_time_override_enabled = True
 
     only_pid._kp = 0.0
@@ -129,6 +129,9 @@ def test_integral_output(only_pid):
     assert captured_msgs[0].data == pytest.approx(0.6)
 
 def test_derivative_output(only_pid):
+    only_pid.set_parameters([Parameter("use_sim_time", Parameter.Type.BOOL, True)])
+    only_pid.get_clock().is_ros_time_override_enabled = True
+
     only_pid._kp = 0.0
     only_pid._ki = 0.0
 
@@ -146,12 +149,12 @@ def test_derivative_output(only_pid):
 
     only_pid.depth_callback(msg)
 
-    only_pid.get_clock().set_ros_time_override(Time(seconds=1.2))
+    only_pid.get_clock().set_ros_time_override(Time(seconds=2.1))
 
     msg.data = 4.0
     only_pid.depth_callback(msg)
 
-    assert captured_msgs[1].data == -10.0
+    assert captured_msgs[1].data == pytest.approx(-4.0)
 
 def test_output_max(only_pid):
     only_pid._ki = 0.0
