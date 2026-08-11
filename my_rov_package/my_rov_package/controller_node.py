@@ -113,13 +113,18 @@ def test_integral_output(only_pid):
     captured_msgs = []
     only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
 
+    only_pid.get_clock().set_ros_time_override(Time(seconds=1.0))
+
     msg = Float64()
     msg.data = 2.0
 
     only_pid.depth_callback(msg)
+
+    only_pid.get_clock().set_ros_time_override(Time(seconds=1.1))
+
     only_pid.depth_callback(msg)
 
-    assert captured_msgs[0].data == pytest.approx(3.0, abs=0.01)
+    assert captured_msgs[0].data == pytest.approx(0.3)
 
 def test_derivative_output(only_pid):
     only_pid._kp = 0.0
@@ -128,11 +133,18 @@ def test_derivative_output(only_pid):
     captured_msgs = []
     only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
 
+    only_pid.get_clock().set_ros_time_override(Time(seconds=1.0))
+
     msg = Float64()
     msg.data = 2.0
 
     only_pid.depth_callback(msg)
+
+    only_pid.get_clock().set_ros_time_override(Time(seconds=1.1))
+
     only_pid.depth_callback(msg)
+
+    only_pid.get_clock().set_ros_time_override(Time(seconds=1.2))
 
     msg.data = 4.0
     only_pid.depth_callback(msg)
