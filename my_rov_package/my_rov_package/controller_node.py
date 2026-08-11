@@ -134,8 +134,36 @@ def test_derivative_output(only_pid):
     only_pid.depth_callback(msg)
 
     assert captured_msgs[0].data == -10.0
-    
 
+def test_output_max(only_pid):
+    only_pid._ki = 0.0
+    only_pid._kd = 0.0
+
+    captured_msgs = []
+    only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
+
+    msg = Float64()
+    msg.data = -10.0
+
+    only_pid.depth_callback(msg)
+    only_pid.depth_callback(msg)
+
+    assert captured_msgs[0].data == 10.0
+
+def test_output_min(only_pid):
+    only_pid._ki = 0.0
+    only_pid._kd = 0.0
+
+    captured_msgs = []
+    only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
+
+    msg = Float64()
+    msg.data = 20.0
+
+    only_pid.depth_callback(msg)
+    only_pid.depth_callback(msg)
+
+    assert captured_msgs[0].data == -10.0
 
 def main(args=None):
     rclpy.init(args=args)
