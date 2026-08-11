@@ -117,11 +117,24 @@ def test_integral_output(only_pid):
 
     assert captured_msgs[0].data == pytest.approx(3.0, abs=0.01)
 
-def derivative_output(only_pid):
-    only_pid._kd = 0.0
+def test_derivative_output(only_pid):
+    only_pid._kp = 0.0
     only_pid._ki = 0.0
 
+    captured_msgs = []
+    only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
 
+    msg = Float64()
+    msg.data = 2.0
+
+    only_pid.depth_callback(msg)
+    only_pid.depth_callback(msg)
+
+    msg.data = 4.0
+    only_pid.depth_callback(msg)
+
+    assert captured_msgs[0].data == -10.0
+    
 
 
 def main(args=None):
