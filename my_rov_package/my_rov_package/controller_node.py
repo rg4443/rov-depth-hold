@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node 
+from rclpy.time import Time
 from std_msgs.msg import Float64
 import pytest
 
@@ -23,7 +24,6 @@ class ControllerNode(Node):
         self.integral: float = 0.0
         self.previous_error = None
         self.previous_time = None
-
         self.depth_sub = self.create_subscription(Float64, "depth_reading", self.depth_callback, 10)
 
         self.thruster_pub = self.create_publisher(Float64, "thruster_command", 10)
