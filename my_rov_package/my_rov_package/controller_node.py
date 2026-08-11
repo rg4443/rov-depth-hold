@@ -82,7 +82,11 @@ class ControllerNode(Node):
 
 @pytest.fixture
 def only_pid():
-    return ControllerNode()
+    rclpy.init()
+    node = ControllerNode()
+    yield node
+    node.destroy_node()
+    rclpy.shutdown()
 
 def test_proportional_output(only_pid):
     only_pid._ki = 0.0
@@ -133,7 +137,7 @@ def test_derivative_output(only_pid):
     msg.data = 4.0
     only_pid.depth_callback(msg)
 
-    assert captured_msgs[0].data == -10.0
+    assert captured_msgs[1].data == -10.0
 
 def test_output_max(only_pid):
     only_pid._ki = 0.0
