@@ -10,6 +10,9 @@ build/my_rov_package/my_rov_package.egg-info/top_level.txt
 build/my_rov_package/my_rov_package.egg-info/zip-safe
 launch/depth_hold.launch.py
 my_rov_package/__init__.py
+my_rov_package/controller_node.py
+my_rov_package/depth_sensor.py
+my_rov_package/physics_simulator_node.py
 resource/my_rov_package
 test/test_copyright.py
 test/test_flake8.py
