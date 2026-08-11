@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node 
 from rclpy.time import Time
+from rclpy.parameter import Parameter
 from std_msgs.msg import Float64
 import pytest
 
@@ -105,10 +106,11 @@ def test_proportional_output(only_pid):
     assert captured_msgs[0].data == 6.0
 
 def test_integral_output(only_pid):
+    only_pid.set_parameters([Parameter('use_sim_time', Parameter.Type.BOOL, True)])
+    only_pid.get_clock().is_ros_time_override_enabled = True
+
     only_pid._kp = 0.0
     only_pid._kd = 0.0
-
-    only_pid.integral = 1.5
 
     captured_msgs = []
     only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
@@ -124,7 +126,7 @@ def test_integral_output(only_pid):
 
     only_pid.depth_callback(msg)
 
-    assert captured_msgs[0].data == pytest.approx(0.3)
+    assert captured_msgs[0].data == pytest.approx(0.6)
 
 def test_derivative_output(only_pid):
     only_pid._kp = 0.0
