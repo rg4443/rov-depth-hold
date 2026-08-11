@@ -3,15 +3,11 @@ from rclpy.node import Node
 from std_msgs.msg import Float64
 import pytest
 
-@pytest.fixture
-def p_only_pid():
-    return ControllerNode(kp=2.0, ki=0.0, kd=0.0, output_min=-10.0, output_max=10.0)
-
 class ControllerNode(Node):
-    def __init__(self, kp: float = 2.0, ki: float = 2.0, kd: float = 2.09, output_min: float = -10.0, output_max = 10.0):
+    def __init__(self, kp: float = 2.0, ki: float = 2.0, kd: float = 2.0, output_min: float = -10.0, output_max = 10.0, setpoint: float = 5.0):
         super().__init__("controller_node")
 
-        self.target_depth: float = 3.0
+        self.target_depth: float = setpoint
 
         self.declare_parameter("kp", kp)
         self.declare_parameter("ki", ki)
@@ -83,6 +79,50 @@ class ControllerNode(Node):
         self.thruster_pub.publish(clamped_output)
 
         self.get_logger().info(f"Current Depth: {current_depth}m | Error: {error}m | Output Thrust: {clamped_output.data:.2f}")
+
+@pytest.fixture
+def only_pid():
+    return ControllerNode()
+
+def test_proportional_output(only_pid):
+    only_pid._ki = 0.0
+    only_pid._kd = 0.0
+
+    captured_msgs = []
+    only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
+
+    msg = Float64()
+    msg.data = 2.0
+
+    only_pid.depth_callback(msg) # initalize self.previous_time
+    only_pid.depth_callback(msg) # run the pid calcuation
+ 
+    assert only_pid.previous_error == 3.0
+    assert captured_msgs[0].data == 6.0
+
+def test_integral_output(only_pid):
+    only_pid._kp = 0.0
+    only_pid._kd = 0.0
+
+    only_pid.integral = 1.5
+
+    captured_msgs = []
+    only_pid.thruster_pub.publish = lambda msg: captured_msgs.append(msg)
+
+    msg = Float64()
+    msg.data = 2.0
+
+    only_pid.depth_callback(msg)
+    only_pid.depth_callback(msg)
+
+    assert captured_msgs[0].data == pytest.approx(3.0, abs=0.01)
+
+def derivative_output(only_pid):
+    only_pid._kd = 0.0
+    only_pid._ki = 0.0
+
+
+
 
 def main(args=None):
     rclpy.init(args=args)
